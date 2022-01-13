@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Custom Shape Progress Bar</title>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <svg>
+                <path class="progress-back" d="M10,125 L 10,35 Q10,10 35,10 L125,10" />
+                <path class="progress-back" d="M175,10 L 265,10 Q290,10 290,35 L290,125" />
+                <path class="progress-back" d="M290,175 L 290,265 Q290,290 265,290 L175,290" />
+                <path class="progress-back" d="M125,290 L 35,290 Q10,290 10,265 L10,175" />
+                <path class="progress" style="--color: #ff6929; --percent: 90" d="M10,125 L 10,35 Q10,10 35,10 L125,10" />
+                <path class="progress" style="--color: #0086df; --percent: 75" d="M175,10 L 265,10 Q290,10 290,35 L290,125" />
+                <path class="progress" style="--color: #88d12e; --percent: 40" d="M290,175 L 290,265 Q290,290 265,290 L175,290" />
+                <path class="progress" style="--color: #ffe72d; --percent: 60" d="M125,290 L 35,290 Q10,290 10,265 L10,175" />
+            </svg>
+            <div class="texts">
+                <div class="text">HTML<span>90%</span></div>
+                <div class="text">CSS<span>75%</span></div>
+                <div class="text">Javascript<span>60%</span></div>
+                <div class="text">Node.js<span>40%</span></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

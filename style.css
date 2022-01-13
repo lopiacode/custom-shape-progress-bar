@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body, .container {
+    width: 100%;
+    height: 100%;
+}
+.container {
+    background-color: #2a2a2a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+.texts {
+    font: 20px bold, Roboto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.text {
+    width: 150px;
+    height: 150px;
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+.text > span {
+    color: #ccc;
+}
+svg {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+.progress-back {
+    fill: none;
+    stroke: rgba(0, 0, 0, .5);
+    stroke-width: 15px;
+    stroke-linecap: round;
+}
+.progress {
+    fill: none;
+    stroke-width: 15px;
+    stroke-linecap: round;
+    stroke: var(--color);
+    filter: drop-shadow(0 0 20px var(--color));
+    stroke-dasharray: 221;
+    stroke-dashoffset: calc(221px - (221px * var(--percent)) / 100);
+    animation: anim .5s ease-out;
+}
+@keyframes anim {
+    0% { stroke-dashoffset: 221; }
+    100% { stroke-dashoffset: calc(221px - (221px * var(--percent)) / 100); }
+}
